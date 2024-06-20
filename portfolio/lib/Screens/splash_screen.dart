@@ -9,7 +9,7 @@ class SplashScreen extends StatelessWidget {
     return MaterialApp(
       home: AnimatedSplashScreen(
         splash: Lottie.asset(
-          'rocket_lottie.json',
+          'animation/rocket_lottie.json',
         ),
         nextScreen: HomePage(),
         splashTransition: SplashTransition.fadeTransition,

@@ -22,8 +22,10 @@ class _GradientContainerState extends State<GradientContainer>
       duration: Duration(seconds: 2),
     )..repeat(reverse: true);
     _colorAnimation = ColorTween(
-      begin: Color.fromARGB(255, 13, 73, 97),
-      end: Color.fromARGB(255, 5, 38, 77),
+      begin: Color.fromARGB(255, 82, 82, 82),
+      end: Colors.black,
+      //begin: Color.fromARGB(255, 1, 183, 255),
+      //end: Color.fromARGB(255, 5, 38, 77),
     ).animate(_animationController);
   }
 
@@ -45,7 +47,7 @@ class _GradientContainerState extends State<GradientContainer>
               end: Alignment.bottomRight,
               colors: [
                 _colorAnimation.value ?? Colors.transparent,
-                Color.fromARGB(255, 24, 73, 92),
+                Color.fromARGB(255, 0, 0, 0),
               ],
             ),
           ),

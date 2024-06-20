@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class InsideContainer extends StatelessWidget {
+  Widget? child;
+  InsideContainer({Widget? child}) {
+    this.child = child;
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
