@@ -4,6 +4,7 @@ import 'package:animated_background/animated_background.dart';
 import 'package:portfolio/Components/gradient_container.dart';
 import 'package:portfolio/Components/imgcont.dart';
 import 'package:portfolio/Components/inside_cont.dart';
+import 'package:portfolio/Components/mobscreen.dart';
 import 'package:portfolio/Components/threeD_container.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,12 +31,24 @@ class _HomePageState extends State<HomePage>
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                build3dContainer(threeD, -threeD, GradientContainer(SizedBox()),
+                build3dContainer(
+                    threeD,
+                    -threeD,
+                    GradientContainer(
+                        chld: SizedBox(), delay: Duration(seconds: 0)),
                     0), // Top left
-                build3dContainer(0.0, -threeD, GradientContainer(SizedBox()),
+                build3dContainer(
+                    0.0,
+                    -threeD,
+                    GradientContainer(
+                        chld: SizedBox(), delay: Duration(seconds: 1)),
                     0), // Middle left
-                build3dContainer(-threeD, -threeD,
-                    GradientContainer(SizedBox()), 0), // Bottom left
+                build3dContainer(
+                    -threeD,
+                    -threeD,
+                    GradientContainer(
+                        chld: SizedBox(), delay: Duration(seconds: 2)),
+                    0), // Bottom left
               ],
             ),
             SizedBox(
@@ -44,7 +57,8 @@ class _HomePageState extends State<HomePage>
                 device: Devices.android.samsungGalaxyNote20,
                 isFrameVisible: true,
                 orientation: Orientation.portrait,
-                screen: GradientContainer(SizedBox()),
+                screen: GradientContainer(
+                    chld: MobScreen(), delay: Duration(seconds: 1)),
               ),
             ),
             Column(
@@ -52,10 +66,18 @@ class _HomePageState extends State<HomePage>
               children: [
                 build3dContainer(
                     threeD, threeD, ImageContainer(), 320), // Top right
-                build3dContainer(0.0, threeD, GradientContainer(SizedBox()),
+                build3dContainer(
+                    0.0,
+                    threeD,
+                    GradientContainer(
+                        chld: SizedBox(), delay: Duration(milliseconds: 2200)),
                     320), // Middle right
                 build3dContainer(
-                    -threeD, threeD, GradientContainer(SizedBox()), 320),
+                    -threeD,
+                    threeD,
+                    GradientContainer(
+                        chld: SizedBox(), delay: Duration(milliseconds: 3200)),
+                    320),
               ],
             ),
           ],

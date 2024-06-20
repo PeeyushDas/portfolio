@@ -13,7 +13,7 @@ Widget build3dContainer(double x, double y, Widget chld, double Xoffset) {
       width: 320,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: Colors.white,
+        color: Colors.transparent,
         border: Border.all(
           color: Colors.grey,
           width: 2,

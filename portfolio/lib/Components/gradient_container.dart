@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class GradientContainer extends StatefulWidget {
+  final Widget? chld;
+  final Duration delay;
+
+  GradientContainer({this.chld, this.delay = Duration.zero});
+
   @override
   _GradientContainerState createState() => _GradientContainerState();
-  Widget? chld;
-  GradientContainer(Widget? child) {
-    this.chld = child;
-  }
 }
 
 class _GradientContainerState extends State<GradientContainer>
@@ -20,13 +21,15 @@ class _GradientContainerState extends State<GradientContainer>
     _animationController = AnimationController(
       vsync: this,
       duration: Duration(seconds: 2),
-    )..repeat(reverse: true);
+    );
     _colorAnimation = ColorTween(
-      begin: Color.fromARGB(255, 82, 82, 82),
-      end: Colors.black,
-      //begin: Color.fromARGB(255, 1, 183, 255),
-      //end: Color.fromARGB(255, 5, 38, 77),
+      end: Color.fromARGB(255, 63, 63, 63),
+      begin: Color.fromARGB(255, 0, 0, 0),
     ).animate(_animationController);
+
+    Future.delayed(widget.delay, () {
+      _animationController.repeat(reverse: true);
+    });
   }
 
   @override
