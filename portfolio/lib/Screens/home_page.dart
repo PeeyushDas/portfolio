@@ -1,11 +1,14 @@
 import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_background/animated_background.dart';
+import 'package:portfolio/Components/about_text.dart';
 import 'package:portfolio/Components/gradient_container.dart';
 import 'package:portfolio/Components/imgcont.dart';
 import 'package:portfolio/Components/inside_cont.dart';
 import 'package:portfolio/Components/mobscreen.dart';
+import 'package:portfolio/Components/programming_lng.dart';
 import 'package:portfolio/Components/threeD_container.dart';
+import 'package:portfolio/Components/work_exp.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -35,31 +38,42 @@ class _HomePageState extends State<HomePage>
                     threeD,
                     -threeD,
                     GradientContainer(
-                        chld: SizedBox(), delay: Duration(seconds: 0)),
+                        chld: AboutText(), delay: Duration(seconds: 0)),
                     0), // Top left
                 build3dContainer(
                     0.0,
                     -threeD,
                     GradientContainer(
-                        chld: SizedBox(), delay: Duration(seconds: 1)),
+                        chld: ProgrammingLanguageComponent(),
+                        delay: Duration(seconds: 1)),
                     0), // Middle left
                 build3dContainer(
                     -threeD,
                     -threeD,
                     GradientContainer(
-                        chld: SizedBox(), delay: Duration(seconds: 2)),
+                        chld: WorkExperience(), delay: Duration(seconds: 2)),
                     0), // Bottom left
               ],
             ),
-            SizedBox(
-              height: 850,
-              child: DeviceFrame(
-                device: Devices.android.samsungGalaxyNote20,
-                isFrameVisible: true,
-                orientation: Orientation.portrait,
-                screen: GradientContainer(
-                    chld: MobScreen(), delay: Duration(seconds: 1)),
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                SizedBox(
+                  height: 850,
+                  child: DeviceFrame(
+                    device: Devices.android.samsungGalaxyNote20,
+                    isFrameVisible: true,
+                    orientation: Orientation.portrait,
+                    screen: GradientContainer(
+                        chld: MobScreen(), delay: Duration(seconds: 1)),
+                  ),
+                ),
+                Text(
+                  "Built with Flutter",
+                  style:
+                      TextStyle(fontFamily: 'nasalization', color: Colors.grey),
+                ),
+              ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

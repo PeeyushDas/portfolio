@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/Components/app.dart';
+import 'package:portfolio/utils/txt_theme.dart';
 
 class MobScreen extends StatefulWidget {
   @override
@@ -23,11 +24,9 @@ class _MobScreenState extends State<MobScreen> {
               animatedTexts: [
                 TypewriterAnimatedText(
                   'GREETINGS, SPACE TRAVELER! EXPLORE MY WORK AMONG THE STARS.',
-                  textStyle: const TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.normal,
-                      color: Color(0xffD3D3D3),
-                      fontFamily: 'nasalization'),
+                  textStyle: NasaTextStyle(
+                    30,
+                  ),
                   speed: const Duration(milliseconds: 150),
                 ),
               ],
@@ -52,16 +51,20 @@ class _MobScreenState extends State<MobScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       AppContainer(
-                          imagePath: 'https://i.imgur.com/Bvoqh4m.jpeg',
+                          imagePath:
+                              'https://ik.imagekit.io/fzng9em8c/Portfolio/person.jpg?updatedAt=1718936236261',
                           text: 'About'),
                       AppContainer(
-                          imagePath: 'https://i.imgur.com/kodeRl8.jpeg',
+                          imagePath:
+                              'https://ik.imagekit.io/fzng9em8c/Portfolio/linkedin.jpg?updatedAt=1718936236154',
                           text: 'LinkedIn'),
                       AppContainer(
-                          imagePath: 'https://i.imgur.com/eiGssFR.png',
+                          imagePath:
+                              'https://ik.imagekit.io/fzng9em8c/Portfolio/x.png?updatedAt=1718936236392',
                           text: 'X'),
                       AppContainer(
-                          imagePath: 'https://i.imgur.com/ehFbuZ9.jpeg',
+                          imagePath:
+                              'https://ik.imagekit.io/fzng9em8c/Portfolio/resume.jpg?updatedAt=1718936236204',
                           text: 'Resume')
                     ],
                   ),
@@ -70,16 +73,20 @@ class _MobScreenState extends State<MobScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       AppContainer(
-                          imagePath: 'https://i.imgur.com/xpZy0VO.png',
+                          imagePath:
+                              'https://ik.imagekit.io/fzng9em8c/Portfolio/leetcode.png?updatedAt=1718936235881',
                           text: 'LeetCode'),
                       AppContainer(
-                          imagePath: 'https://i.imgur.com/Uo9UAyV.png',
+                          imagePath:
+                              'https://ik.imagekit.io/fzng9em8c/Portfolio/geeksforgeeks.png?updatedAt=1718936236170',
                           text: 'GfG'),
                       AppContainer(
-                          imagePath: 'https://i.imgur.com/3aEdSkE.png',
+                          imagePath:
+                              'https://ik.imagekit.io/fzng9em8c/Portfolio/github.png?updatedAt=1718936089854',
                           text: 'GitHub'),
                       AppContainer(
-                          imagePath: 'https://i.imgur.com/ZtGt98X.png',
+                          imagePath:
+                              'https://ik.imagekit.io/fzng9em8c/Portfolio/edu.png?updatedAt=1718936236128',
                           text: 'Education')
                     ],
                   ),

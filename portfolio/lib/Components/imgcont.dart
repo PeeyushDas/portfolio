@@ -7,7 +7,7 @@ class ImageContainer extends StatelessWidget {
       width: 320,
       height: 320,
       child: Image.network(
-        'https://i.imgur.com/Bvoqh4m.jpeg',
+        'https://ik.imagekit.io/fzng9em8c/Portfolio/person.jpg?updatedAt=1718936236261',
         fit: BoxFit.cover,
       ),
     );
