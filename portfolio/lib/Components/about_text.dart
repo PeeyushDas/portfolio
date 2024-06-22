@@ -38,7 +38,7 @@ class _AboutTextState extends State<AboutText> {
         } else {
           return Container(
             child: Center(
-                child: Text('LOOK WE HAVE A VISITOR!!!',
+                child: Text('LOOK WE HAVE A VISITOR!!! \n ^_^ \n',
                     style: NasaTextStyle(16))),
           ); // Empty container for the first 10 seconds
         }

@@ -2,12 +2,13 @@ import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_background/animated_background.dart';
 import 'package:portfolio/Components/about_text.dart';
+import 'package:portfolio/Components/frameworks.dart';
 import 'package:portfolio/Components/gradient_container.dart';
 import 'package:portfolio/Components/imgcont.dart';
-import 'package:portfolio/Components/inside_cont.dart';
 import 'package:portfolio/Components/mobscreen.dart';
 import 'package:portfolio/Components/programming_lng.dart';
 import 'package:portfolio/Components/threeD_container.dart';
+import 'package:portfolio/Components/tools.dart';
 import 'package:portfolio/Components/work_exp.dart';
 
 class HomePage extends StatefulWidget {
@@ -84,13 +85,15 @@ class _HomePageState extends State<HomePage>
                     0.0,
                     threeD,
                     GradientContainer(
-                        chld: SizedBox(), delay: Duration(milliseconds: 2200)),
+                        chld: Frameworks(),
+                        delay: Duration(milliseconds: 2200)),
                     320), // Middle right
                 build3dContainer(
                     -threeD,
                     threeD,
                     GradientContainer(
-                        chld: SizedBox(), delay: Duration(milliseconds: 3200)),
+                        chld: tools_package(),
+                        delay: Duration(milliseconds: 3200)),
                     320),
               ],
             ),

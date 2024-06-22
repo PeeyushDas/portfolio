@@ -90,6 +90,17 @@ class _MobScreenState extends State<MobScreen> {
                           text: 'Education')
                     ],
                   ),
+                  SizedBox(height: 20.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(width: 24.0),
+                      AppContainer(
+                          imagePath:
+                              'https://ik.imagekit.io/fzng9em8c/Portfolio/email.jpg?updatedAt=1718986922602',
+                          text: 'Email'),
+                    ],
+                  ),
                 ],
               ),
             )),

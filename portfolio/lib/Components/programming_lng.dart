@@ -9,7 +9,7 @@ class ProgrammingLanguageComponent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 15.0),
+        SizedBox(height: 10.0),
         Text(
           "   Programming Languages",
           style: NasaTextStyle(
@@ -26,16 +26,17 @@ class ProgrammingLanguageComponent extends StatelessWidget {
             text: 'C Programming    '),
         ImgTextContainer(
             imgpath:
-                'https://ik.imagekit.io/fzng9em8c/Portfolio/c++prog.png?updatedAt=1718937306657',
+                'https://ik.imagekit.io/fzng9em8c/Portfolio/c++prog.png?updatedAt=1718981844909',
             text: 'C++ Programming'),
         ImgTextContainer(
             imgpath:
-                'https://ik.imagekit.io/fzng9em8c/Portfolio/javaprog.png?updatedAt=1718937306708',
+                'https://ik.imagekit.io/fzng9em8c/Portfolio/javaprog.png?updatedAt=1718981844904',
             text: 'Java Programming'),
         ImgTextContainer(
             imgpath:
-                'https://ik.imagekit.io/fzng9em8c/Portfolio/dart.png?updatedAt=1718937306743',
+                'https://ik.imagekit.io/fzng9em8c/Portfolio/dart.png?updatedAt=1718981844948',
             text: 'Dart Programming'),
+        SizedBox(height: 5.0)
       ],
     );
   }
