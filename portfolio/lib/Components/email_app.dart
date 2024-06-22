@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class AppContainer extends StatelessWidget {
+class AppEmail extends StatelessWidget {
   final String imagePath;
   final String text;
   final String url; // URL field
 
-  AppContainer({
-    required this.imagePath,
-    required this.text,
-    required this.url, // Initialize the URL in the constructor
-  });
-
-  // Method to launch URL
-  Future<void> _launchUrl() async {
-    if (!await launchUrlString(url)) throw 'Could not launch $url';
-  }
+  AppEmail({required this.imagePath, required this.text, required this.url});
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      cursor: SystemMouseCursors.click, // Change cursor on hover
-      child: GestureDetector(
-        onTap: _launchUrl, // Call _launchUrl when the widget is tapped
+    return GestureDetector(
+      onTap: () async {
+        final Uri emailLaunchUri = Uri(
+          scheme: 'mailto',
+          path: url, // Assuming 'text' contains the email address
+        );
+        if (await canLaunchUrl(emailLaunchUri)) {
+          await launchUrl(emailLaunchUri);
+        } else {
+          print('Could not launch $emailLaunchUri');
+        }
+      },
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click, // Change cursor on hover
         child: Container(
           color: Colors.transparent,
           child: Column(

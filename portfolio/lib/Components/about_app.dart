@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:portfolio/Components/about_container.dart';
 
-class AppContainer extends StatelessWidget {
+class Appabout extends StatelessWidget {
   final String imagePath;
   final String text;
-  final String url; // URL field
 
-  AppContainer({
-    required this.imagePath,
-    required this.text,
-    required this.url, // Initialize the URL in the constructor
-  });
+  Appabout({required this.imagePath, required this.text});
 
-  // Method to launch URL
-  Future<void> _launchUrl() async {
-    if (!await launchUrlString(url)) throw 'Could not launch $url';
+  void _showDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AboutContainer();
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      cursor: SystemMouseCursors.click, // Change cursor on hover
-      child: GestureDetector(
-        onTap: _launchUrl, // Call _launchUrl when the widget is tapped
+    return GestureDetector(
+      onTap: () => _showDialog(context),
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click, // Change cursor on hover
         child: Container(
           color: Colors.transparent,
           child: Column(

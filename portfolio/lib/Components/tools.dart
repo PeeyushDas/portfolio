@@ -11,7 +11,7 @@ class tools_package extends StatelessWidget {
       children: [
         SizedBox(height: 10.0),
         Text(
-          "   Packages / Tools",
+          "   Packages",
           style: NasaTextStyle(
             20,
           ),
