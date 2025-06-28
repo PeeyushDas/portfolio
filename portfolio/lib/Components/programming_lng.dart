@@ -44,7 +44,7 @@ class ProgrammingLanguageComponent extends StatelessWidget {
                     text: 'SQL'),
                 ImgTextContainer(
                     imgpath:
-                        'https://ik.imagekit.io/fzng9em8c/Portfolio/c++prog.png?updatedAt=1718981844909',
+                        'https://ik.imagekit.io/fzng9em8c/Portfolio/cprog.png?updatedAt=1718937306709',
                     text: 'C '),
                 ImgTextContainer(
                     imgpath:

@@ -148,6 +148,70 @@ class _MobScreen_2State extends State<MobScreen_2> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
+                        "PROJECTS",
+                        style: NasaTextStyle(sectionTitleSize),
+                      ),
+                      SizedBox(height: verticalSpacing * 0.5),
+                      Container(
+                        width: screenWidth * 0.3,
+                        height: screenWidth * 0.002,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.transparent,
+                              Colors.white,
+                              Colors.transparent
+                            ],
+                          ),
+                        ),
+                      ),
+                      GridView.count(
+                        shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
+                        crossAxisCount: 4,
+                        mainAxisSpacing: verticalSpacing * 0,
+                        crossAxisSpacing:
+                            AppDimensions.getHorizontalSpacing(context) * 0.25,
+                        childAspectRatio: 1.2,
+                        children: [
+                          AppContainer(
+                              imagePath:
+                                  'https://ik.imagekit.io/fzng9em8c/Portfolio/launcher_icon.png?updatedAt=1751119433518',
+                              text: 'CropCure AI',
+                              url:
+                                  'https://drive.google.com/file/d/1YYexKX5H002ELyR26wMslDFNs6rz1pGP/view?usp=sharing'),
+                          AppContainer(
+                              imagePath:
+                                  'https://ik.imagekit.io/fzng9em8c/Portfolio/WhatsApp%20Image%202025-05-27%20at%2013.00.17_6836ffb1.jpg?updatedAt=1751120268160',
+                              text: 'Stethaim',
+                              url:
+                                  'https://drive.google.com/file/d/1XnJj09Io7JrHNRF9WBRxcaVUQigXeHrk/view?usp=sharing'),
+                          AppContainer(
+                              imagePath:
+                                  'https://ik.imagekit.io/fzng9em8c/Portfolio/lesgo_org_logo.jpg?updatedAt=1718937282210',
+                              text: 'Lesgo',
+                              url:
+                                  'https://drive.google.com/file/d/1kDKWShmwAFBpJSrmaHbm3XO6eQHixjCO/view?usp=sharing'),
+                          AppContainer(
+                              imagePath:
+                                  'https://ik.imagekit.io/fzng9em8c/Portfolio/otc.png?updatedAt=1751120268312',
+                              text: 'OTC Trading Bot',
+                              url:
+                                  'https://drive.google.com/file/d/1mbqHn8FTzDTpTtjR7IT5N9lcVhpe0uA2/view?usp=sharing'),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: verticalSpacing * 2),
+
+                Container(
+                  width: double.infinity,
+                  margin: EdgeInsets.symmetric(horizontal: padding),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
                         "WORK EXPERIENCE",
                         style: NasaTextStyle(sectionTitleSize),
                       ),
@@ -239,7 +303,7 @@ class _MobScreen_2State extends State<MobScreen_2> {
                               text: 'SQL'),
                           SkillContainer(
                               imagePath:
-                                  'https://ik.imagekit.io/fzng9em8c/Portfolio/c++prog.png?updatedAt=1718981844909',
+                                  'https://ik.imagekit.io/fzng9em8c/Portfolio/cprog.png?updatedAt=1718937306709',
                               text: 'C'),
                           SkillContainer(
                               imagePath:
