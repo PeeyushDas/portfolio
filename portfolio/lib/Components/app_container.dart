@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/Components/about_container.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 import 'package:portfolio/utils/responsive.dart';
 import 'package:portfolio/utils/dimensions.dart';
 
-class Appabout extends StatelessWidget {
+class AppContainer extends StatelessWidget {
   final String imagePath;
   final String text;
+  final String url;
 
-  Appabout({required this.imagePath, required this.text});
+  AppContainer({
+    required this.imagePath,
+    required this.text,
+    required this.url,
+  });
 
-  void _showDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AboutContainer();
-      },
-    );
+  Future<void> _launchUrl() async {
+    if (!await launchUrlString(url)) throw 'Could not launch $url';
   }
 
   @override
@@ -30,10 +30,10 @@ class Appabout extends StatelessWidget {
     final fontSize = AppDimensions.getCaptionFontSize(context);
     final verticalSpacing = AppDimensions.getVerticalSpacing(context);
 
-    return GestureDetector(
-      onTap: () => _showDialog(context),
-      child: MouseRegion(
-        cursor: SystemMouseCursors.click,
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: _launchUrl,
         child: Container(
           color: Colors.transparent,
           child: Column(

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/Components/about_container.dart';
+import 'package:portfolio/Components/education_container.dart';
 import 'package:portfolio/utils/responsive.dart';
 import 'package:portfolio/utils/dimensions.dart';
 
-class Appabout extends StatelessWidget {
+class AppEducation extends StatelessWidget {
   final String imagePath;
   final String text;
 
-  Appabout({required this.imagePath, required this.text});
+  AppEducation({required this.imagePath, required this.text});
 
   void _showDialog(BuildContext context) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        return AboutContainer();
+        return EducationContainer();
       },
     );
   }
