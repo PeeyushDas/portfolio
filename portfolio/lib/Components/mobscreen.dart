@@ -95,7 +95,7 @@ class _MobScreen_2State extends State<MobScreen_2> {
                             'https://ik.imagekit.io/fzng9em8c/Portfolio/resume.jpg?updatedAt=1718936236204',
                         text: 'Resume',
                         url:
-                            'https://drive.google.com/file/d/1OxLqcs1r5UFfemapWT_CvmjkEt38KB_6/view')
+                            'https://drive.google.com/file/d/1rKp69IxCItJKOXm_ollm15kFPbApoT6g/view?usp=sharing')
                   ],
                 ),
                 SizedBox(height: verticalSpacing),
@@ -689,7 +689,7 @@ class _MobScreenState extends State<MobScreen> {
                             'https://ik.imagekit.io/fzng9em8c/Portfolio/resume.jpg?updatedAt=1718936236204',
                         text: 'Resume',
                         url:
-                            'https://drive.google.com/file/d/1OxLqcs1r5UFfemapWT_CvmjkEt38KB_6/view')
+                            'https://drive.google.com/file/d/1rKp69IxCItJKOXm_ollm15kFPbApoT6g/view?usp=sharing')
                   ],
                 ),
                 SizedBox(height: verticalSpacing),
