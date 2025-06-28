@@ -131,7 +131,7 @@ class _MobScreen_2State extends State<MobScreen_2> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(width: 24),
+                    SizedBox(width: 25),
                     AppEmail(
                         imagePath:
                             'https://ik.imagekit.io/fzng9em8c/Portfolio/email.jpg?updatedAt=1718986922602',
