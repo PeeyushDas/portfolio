@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'nasalization',
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: HomePage(),
     );
   }
 }
